@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.log
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~ 
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Data files
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.parquet
+*.feather
+*.db
+
+# Model artifacts
+model/
+*.h5
+*.hdf5
+*.keras
+*.pkl
+*.joblib
+*.tflite
+*.onnx
+
+# Logs & outputs
+*.log
+*.out
+*.err
+logs/
+tensorboard/
+checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment configs
+.envrc
