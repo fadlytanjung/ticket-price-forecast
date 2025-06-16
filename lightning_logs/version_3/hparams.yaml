@@ -1,0 +1,238 @@
+attention_head_size: 1
+categorical_groups: {}
+causal_attention: true
+dropout: 0.1
+embedding_labels:
+  month:
+    April: 0
+    February: 1
+    January: 2
+    July: 3
+    June: 4
+    March: 5
+    May: 6
+  route:
+    CGK_BDJ: 0
+    CGK_BDO: 1
+    CGK_BIK: 2
+    CGK_BKS: 3
+    CGK_BPN: 4
+    CGK_BTH: 5
+    CGK_BTJ: 6
+    CGK_DJB: 7
+    CGK_DJJ: 8
+    CGK_DPS: 9
+    CGK_JOG: 10
+    CGK_KNO: 11
+    CGK_LOP: 12
+    CGK_MDC: 13
+    CGK_MKQ: 14
+    CGK_MLG: 15
+    CGK_PDG: 16
+    CGK_PGK: 17
+    CGK_PKU: 18
+    CGK_PLM: 19
+    CGK_PNK: 20
+    CGK_SOC: 21
+    CGK_SRG: 22
+    CGK_SUB: 23
+    CGK_TKG: 24
+    CGK_TNJ: 25
+    CGK_TRK: 26
+    CGK_UPG: 27
+    CGK_YIA: 28
+  weekday:
+    Friday: 0
+    Monday: 1
+    Saturday: 2
+    Sunday: 3
+    Thursday: 4
+    Tuesday: 5
+    Wednesday: 6
+embedding_paddings: []
+embedding_sizes:
+  month: !!python/tuple
+  - 7
+  - 5
+  route: !!python/tuple
+  - 29
+  - 11
+  weekday: !!python/tuple
+  - 7
+  - 5
+hidden_continuous_size: 8
+hidden_continuous_sizes: {}
+hidden_size: 16
+learning_rate: 0.03
+log_gradient_flow: false
+log_interval: -1
+log_val_interval: null
+lstm_layers: 1
+max_encoder_length: 14
+monotone_constaints: {}
+optimizer: ranger
+optimizer_params: null
+output_size: 7
+output_transformer: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+  center: true
+  groups:
+  - route
+  method: standard
+  method_kwargs: {}
+  missing_:
+    center: 1076876.3049327354
+    scale: 205125.09228083896
+  norm_: !!python/object:pandas.core.frame.DataFrame
+    _flags:
+      allows_duplicate_labels: true
+    _metadata: []
+    _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+    - !!python/tuple
+      - !!python/object/apply:pandas._libs.internals._unpickle_block
+        - !!python/object/apply:numpy.core.multiarray._reconstruct
+          args:
+          - &id001 !!python/name:numpy.ndarray ''
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+            - 29
+          - !!python/object/apply:numpy.dtype
+            args:
+            - f8
+            - false
+            - true
+            state: !!python/tuple
+            - 3
+            - <
+            - null
+            - null
+            - null
+            - -1
+            - -1
+            - 0
+          - false
+          - !!binary |
+            Q/qapxoQM0Gk+vucjpZDQbVFMEe/dk1BKYuyqAHqKEGKJl0IA5syQc3MzIy8Ay9Bxw5KyyP6P0Gt
+            1Ertjt0rQYUdLKtsY1BBA0VKGlzLJ0EU8ZKAp8M4QV4SEE6MbjBBbmDUmUglLkGJlwSE1CFDQQdT
+            5FNEMFFBGHTLvzyOMEEmYRIGRhQwQdd0TZc79SpBhlBd37alK0Foe7Yn10glQVgomnSNzzJBZYH0
+            qRsPKEE+27M9cn8kQckhAutHSSZB0MlFwSFdJkEQcOG2AO8xQd3VLiVqQUBBDQcdp3CaNUFRFmVR
+            AT8iQR/WbvvhmxJBxAoILA8vIkH8UeZ/Tj4hQTEAf2DIbABBXdB+CbtSEUEmsMS9DuEGQV3bwR/M
+            DhhBKyVp1pGHA0HX3ym0ZiYkQdCq3TR/mfJA1Ywtl4cX9EATZGwlSswNQSoxaihAIAdBoXXYtdeN
+            F0Fsbi3EkacZQQvsqGxLFwtBi7z9vCgKCUFzPz3VlSr+QEmlZDKjh/xAidxGIHqe+UC2WP0zDXIQ
+            QaXNf5r5AvZAdaHfsBX0+kBlaxT6CxzyQJrxg4qBo+tAIveWy8JrC0Eeqs8cLEEJQaaOjdSV2A9B
+            K8HxOIzs+kA=
+        - !!python/object/apply:builtins.slice
+          - 0
+          - 2
+          - 1
+        - 2
+    - - !!python/object/apply:pandas.core.indexes.base._new_Index
+        - !!python/name:pandas.core.indexes.base.Index ''
+        - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 2
+            - !!python/object/apply:numpy.dtype
+              args:
+              - O8
+              - false
+              - true
+              state: !!python/tuple
+              - 3
+              - '|'
+              - null
+              - null
+              - null
+              - -1
+              - -1
+              - 63
+            - false
+            - - center
+              - scale
+          name: null
+      - !!python/object/apply:pandas.core.indexes.base._new_Index
+        - !!python/name:pandas.core.indexes.numeric.Int64Index ''
+        - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 29
+            - !!python/object/apply:numpy.dtype
+              args:
+              - i8
+              - false
+              - true
+              state: !!python/tuple
+              - 3
+              - <
+              - null
+              - null
+              - null
+              - -1
+              - -1
+              - 0
+            - false
+            - !!binary |
+              AAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAAAAAAAAUAAAAAAAAABgAAAAAAAAAH
+              AAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4A
+              AAAAAAAADwAAAAAAAAAQAAAAAAAAABEAAAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAA
+              AAAAAAAWAAAAAAAAABcAAAAAAAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAA
+              AAAAAA==
+          name: route
+    _typ: dataframe
+    attrs: {}
+  scale_by_group: false
+  transformation: softplus
+reduce_on_plateau_min_lr: 1.0e-05
+reduce_on_plateau_patience: 4
+reduce_on_plateau_reduction: 2.0
+share_single_variable_networks: false
+static_categoricals:
+- route
+static_reals:
+- encoder_length
+- best_price_center
+- best_price_scale
+time_varying_categoricals_decoder:
+- weekday
+- month
+time_varying_categoricals_encoder:
+- weekday
+- month
+time_varying_reals_decoder:
+- days_to_departure
+- relative_time_idx
+time_varying_reals_encoder:
+- days_to_departure
+- relative_time_idx
+- best_price
+weight_decay: 0.0
+x_categoricals:
+- route
+- weekday
+- month
+x_reals:
+- encoder_length
+- best_price_center
+- best_price_scale
+- days_to_departure
+- relative_time_idx
+- best_price
